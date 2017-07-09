@@ -1,0 +1,28 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace _17.repairTale
+{
+    class repairTale
+    {
+        static void Main(string[] args)
+        {
+            int n = int.Parse(Console.ReadLine());
+            float w = float.Parse(Console.ReadLine());
+            float l = float.Parse(Console.ReadLine());
+            byte m = byte.Parse(Console.ReadLine());
+            byte o = byte.Parse(Console.ReadLine());
+            var allArea = n * n;
+            var chairArea = m * o;
+            var area = allArea - chairArea;
+            var tileArea = w * l;
+            var needTile = area / tileArea;
+            var time = needTile * 0.2;
+            Console.WriteLine("{0:f2}",needTile);
+            Console.WriteLine("{0:f2}",time);
+        }
+    }
+}
